@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors with Functions</title>
+</head>
+<body>
+    <p>Game of Rock Paper Scissors</p>
+
+    <button onclick="
+
+        computerChoice();
+       
+        console.log(compValue);
+
+        let result = '';
+
+        if (compValue === 'Rock')
+        {
+            result = 'Draw';
+        }
+        else if (compValue === 'Paper')
+        {
+            result = 'You Loose';
+        }
+        else if (compValue === 'Scissors')
+        {
+            result = 'You win';
+        }
+
+        alert(`You picked Rock. Computer picked ${compValue}. ${result}`);
+    
+    ">Rock</button>
+
+    <button onclick="
+
+        computerChoice();
+
+        console.log(compValue);
+
+        if (compValue === 'Rock')
+        {
+            result = 'You win';
+        }
+        else if (compValue === 'Paper')
+        {
+            result = 'Draw';
+        }
+        else if (compValue === 'Scissors')
+        {
+            result = 'You loose';
+        }
+
+        alert(`Your choice is Paper. Computer choice ${compValue}. ${result}`);
+    ">Paper</button>
+
+    <button onclick="
+
+        computerChoice();
+
+        console.log(compValue);
+
+        if (compValue === 'Rock')
+        {
+            result = 'You loose';
+        }
+        else if (compValue === 'Paper')
+        {
+            result = 'You win';
+        }
+        else if (compValue === 'Scissors')
+        {
+            result = 'Draw';
+        }
+
+        alert(`Your choice is Scissors. Computer choice ${compValue}. ${result}`);
+    ">Scissors</button>
+
+    <script>
+
+         let compValue = '';
+
+        function computerChoice()
+            {
+                const randomNum = Math.random();
+               
+
+            if (randomNum >= 0 && randomNum <= 1/3)
+            {
+                compValue = 'Rock';
+            }
+            else if (randomNum > 1/3 && randomNum <= 2/3)
+            {
+                compValue = 'Paper';
+            }
+            else if (randomNum > 2/3 && randomNum <= 1)
+            {
+                compValue = 'Scissors';
+            }
+        }
+    </script>
+    
+</body>
+</html>
